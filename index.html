@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashish Rathor | Full-Stack Developer</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style1.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo nav-item">KASHISH</div>
+        <nav>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#work" class="nav-item">Work</a>
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#certificates" class="nav-item">Certificates</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+        <a href="path/to/kashish_resume.pdf" class="resume-button nav-item" download>RESUME</a>
+    </header>
+
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <p class="hero-intro hero-line">Hello I'm</p>
+            <h1 class="golden-gradient-text hero-line">Kashish Rathor</h1>
+            <p class="typewriter-subheading">
+             <span id="typewriter-text" class="gradient-text-span"></span>|
+        </p>
+            <p class="hero-tagline hero-line">
+                Let's achieve true innovation in development and programming through my specialized 
+                <span class="golden-gradient-text"><a href="#services">Services</a></span>
+            </p>
+        </div>
+        <div class="hero-image-placeholder hero-image-placeholder-gsap">
+            <img src="photo.jpeg" alt="profile photo">
+            </div>
+    </section>
+    
+    <section id="about" class="content-section">
+        <h2 class="about-title">ABOUT ME</h2> <br>
+        
+        <div class="about-content">
+            <p><b>High-Performing Full-Stack Developer</b> (B.Tech IT, 3rd Year) with a strong <b>competitive programming background</b> (LeetCode 1400+ Rating) and an <b>active Python Development Internship</b> (VaultOfCodes).</p>
+            <p>Proficient in <b>MERN stack</b> development, <b>Python</b>, and <b>Java</b> with hands-on experience in <b>DSA</b> and <b>OOP</b>.</p>
+            <p>Seeking a challenging SDE or Full Stack role to deliver robust, scalable software solutions.</p>
+        </div>
+    </section>
+
+    <section id="work" class="content-section work-section">
+    <div class="projects-container-wrapper">
+        <div class="projects-track" id="projects-track">
+
+                <div class="project-card" data-project-id="hms">
+                    <div class="card-media-wrapper">
+                        <img src="Gemini_Generated_Image_d64yp7d64yp7d64y.png" alt="Hotel Management System Dashboard" class="card-image-static">
+                        <video class="card-video" muted loop preload="none">
+                            <source src="hmsvideo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3 class="card-title-overlay golden-gradient-text">Hotel Management System</h3>
+                    <div class="card-info">
+                        <h3>Hotel Management System</h3>
+                        <p class="tech-stack">MERN | JWT</p>
+                        <p class="description">Engineered a MERN application featuring separate dashboards and secure JWT-based authentication for 3 access roles - guest, employee, admin.</p>
+                        <a href="https://github.com/Kash-ishhh/hms" target="_blank" class="project-link">See Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="mindmap">
+                    <div class="card-media-wrapper">
+                        <img src="Gemini_Generated_Image_atxu0xatxu0xatxu.png" alt="Mindmap Builder Interface" class="card-image-static">
+                        <video class="card-video" muted loop preload="none">
+                            <source src="mindmapvideo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3 class="card-title-overlay golden-gradient-text">Mindmap Builder with AI</h3>
+                    <div class="card-info">
+                        <h3>Mindmap Builder with AI</h3>
+                        <p class="tech-stack">HTML | CSS | JavaScript | AI API Concept</p>
+                        <p class="description">Developed a web-based tool for users to visually create and organize mindmaps. Designed concept for simulated AI API integration to suggest connections and ideas.</p>
+                        <a href="https://github.com/Kash-ishhh/mindmap-builder" target="_blank" class="project-link">See Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="ecommerce">
+                    <div class="card-media-wrapper">
+                        <img src="Gemini_Generated_Image_tf6x1ltf6x1ltf6x.png" alt="Online Bookstore E-Commerce Front-End" class="card-image-static">
+                        <video class="card-video" muted loop preload="none">
+                            <source src="ecomvideo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3 class="card-title-overlay golden-gradient-text">Online Bookstore E-Commerce</h3>
+                    <div class="card-info">
+                        <h3>Online Bookstore E-Commerce</h3>
+                        <p class="tech-stack">HTML5 | CSS3 | JavaScript</p>
+                        <p class="description">Created a highly responsive, mobile-first e-commerce front-end, achieving 90+ score on UX metrics (Lighthouse).</p>
+                        <a href="https://github.com/Kash-ishhh/bookstore" target="_blank" class="project-link">See Project</a>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+</section>
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3>Full Stack Development</h3>
+                <div class="service-image-media">
+                    <img src="fullstack.png" alt="Full Stack Development">
+                </div>
+                <div class="service-content-info">
+                    <ul class="service-content-list">
+                        <li>MERN Stack Mastery: Building scalable, high-performance web applications.</li>
+                        <li>Frontend Engineering: Modern, responsive UIs (HTML5, CSS3, Tailwind).</li>
+                        <li>API Development: Integrating robust REST APIs.</li>
+                        <li>Database Management: SQL & NoSQL optimization.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <h3>Programming Languages</h3>
+                <div class="service-image-media">
+                    <img src="programming.jpg" alt="Programming Languages">
+                </div>
+                <div class="service-content-info">
+                    <ul class="service-content-list">
+                        <li>Python: AI/Scripting, Automation, Data Analysis (Pandas, NumPy).</li>
+                        <li>JavaScript (ES6+): Expert level proficiency for full stack development.</li>
+                        <li>Java: Strong OOP foundation for scalable systems.</li>
+                        <li>C / C++ / C#: Foundational and basic understanding.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <h3>Data Structures & Algorithms</h3>
+                <div class="service-image-media">
+                    <img src="dsa.png" alt="Data Structures & Algorithms">
+                </div>
+                <div class="service-content-info">
+                    <ul class="service-content-list">
+                        <li>Strong foundation in core DSA and Algorithmic Thinking.</li>
+                        <li>Focus on writing efficient and time/space optimized code.</li>
+                        <li>Competitive programming practice (LeetCode 1400+).</li>
+                        <li>Proven Problem-Solving capabilities through practice.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <div class="service-image-media">
+                    <img src="uiux.jpg" alt="UI/UX Design">
+                </div>
+                <div class="service-content-info">
+                    <ul class="service-content-list">
+                        <li>Applying User-Centered Design (UCD) principles.</li>
+                        <li>Basic wireframing and prototyping skills (Figma).</li>
+                        <li>Crafting intuitive and appealing user interfaces.</li>
+                        <li>Utilizing modern CSS frameworks like Tailwind.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <h3>Research & Analyst</h3>
+                <div class="service-image-media">
+                    <img src="research.jpg" alt="Research & Analyst">
+                </div>
+                <div class="service-content-info">
+                    <ul class="service-content-list">
+                        <li>Analyzing technical feasibility for new ideas (e.g., ProphAI).</li>
+                        <li>Conducting market research to inform product strategy.</li>
+                        <li>Exploring and integrating new technologies & APIs.</li>
+                        <li>Effective debugging and online solution finding.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <h3>Tools & Methodologies</h3>
+                <div class="service-image-media">
+                    <img src="tools.jpg" alt="Tools & Methodologies">
+                </div>
+                <div class="service-content-info">
+                    <ul class="service-content-list">
+                        <li>Version Control: Git & GitHub for code management.</li>
+                        <li>Object-Oriented Programming (OOP) applied in Java & Python.</li>
+                        <li>Database knowledge: SQL & NoSQL fundamentals.</li>
+                        <li>Basic understanding of DevOps concepts (CI/CD).</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="soft-skills" class="content-section soft-skills-section">
+        <h2 class="section-heading">NON TECHNICAL SKILLS</h2>
+        <div class="soft-skills-container-wrapper">
+            <div class="soft-skills-track" id="soft-skills-track">
+                
+                <div class="soft-skill-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Leadership & Teamwork</h3>
+                    <p>Proven effectiveness in collaborating across team projects, taking initiative in defining project direction, and ensuring clear, aligned communication within team settings.</p>
+                </div>
+
+                <div class="soft-skill-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Problem-Solving & Analytical Thinking</h3>
+                    <p>Applying strong analytical skills to identify root causes, developing creative and practical solutions, and demonstrating persistence in tackling challenging problems.</p>
+                </div>
+
+                <div class="soft-skill-card">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Communication & Presentation Skills</h3>
+                    <p>Expertise in articulating ideas clearly and concisely (verbal & written), proficiently explaining complex technical concepts, and structuring information for engaging presentations.</p>
+                </div>
+
+                <div class="soft-skill-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Conceptual Visualization</h3>
+                    <p>Strong ability to visualize and sketch ideas and concepts—useful for brainstorming UI layouts/flows and visually explaining complex system designs.</p>
+                </div>
+
+                <div class="soft-skill-card">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3>Technical Content Writing</h3>
+                    <p>Skilled in writing clear, detailed technical documentation, effectively explaining project features and code logic, and ensuring structured written content.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+ <div class="certifications-content">
+
+        <h3> PROFESSIONAL EXPERIENCE</h3>
+        
+        <div class="experience-block-container">
+            <div class="experience-block" data-image-src="python-internship.jpg"> 
+                <h4><b>Python Developer Intern</b> | VaultOfCodes | Remote | [October 2025] Present (On-going)</h4>
+                <p class="key-focus"><b>Key Focus:</b> Developing and debugging scalable Python scripts for automation and cloud-based deployments.</p>
+                <p class="skills-covered"><b>Skills Covered:</b> Python, Scripting, Code Efficiency, Documentation, Automation.</p>
+            </div>
+            <img src="ol.jpeg" alt="Python Developer Internship" class="cert-image">
+        </div>
+        
+        <br>
+        <hr class="black-hr">
+        <br>
+        
+        <h3> CERTIFICATIONS & COURSES</h3>
+        
+        <div class="certification-block-container">
+            <div class="certification-block" data-image-src="web-designing-trainee.jpg">
+                <h4><b>Web Designing Trainee</b> (6 Months, Sep–Dec 2024) | Logicpro Infosys</h4>
+                <p class="key-focus"><b>Key Focus:</b> Mastering responsive design principles and front-end frameworks for robust web applications.</p>
+                <p class="skills-covered"><b>Skills Covered:</b> HTML5, CSS3, JavaScript, Responsive Design, Bootstrap, Web Design Principles.</p>
+            </div>
+            <img src="webdesigning.jpeg" alt="Web Designing Trainee Certificate" class="cert-image">
+        </div>
+        
+        <br>
+        <hr class="black-hr">
+        <br>
+
+        <div class="certification-block-container">
+            <div class="certification-block" data-image-src="fullstack-linkedin.jpg">
+                <h4><b>Become a Full-Stack Web Developer</b> | LinkedIn Learning Path (105 Hours)</h4>
+                <p class="key-focus"><b>Key Focus:</b> End-to-end MERN stack mastery, from database modeling to robust server and client-side logic.</p>
+                <p class="skills-covered"><b>Skills Covered:</b> Web Development, Full-Stack Development, HTML5, CSS3, JavaScript, Node.js, Express, React.</p>
+            </div>
+            <img src="fullstack.jpg" alt="Full-Stack Web Developer Certificate" class="cert-image">
+        </div>
+        
+        <br>
+        <hr class="black-hr">
+        <br>
+
+        <div class="certification-block-container">
+            <div class="certification-block" data-image-src="devops-professional.jpg">
+                <h4><b>DevOps Professional Certificate</b> | PagerDuty & LinkedIn Learning</h4>
+                <p class="key-focus"><b>Key Focus:</b> CI/CD pipeline implementation and Infrastructure as Code (IaC) principles for automated deployment.</p>
+                <p class="skills-covered"><b>Skills Covered:</b> Continuous Integration and Continuous Delivery (CI/CD), DevOps, Infrastructure as Code (IaC), Git.</p>
+            </div>
+            <img src="devops.png" alt="DevOps Professional Certificate" class="cert-image">
+        </div>
+        
+        <br>
+        <hr class="black-hr">
+        <br>
+
+        <div class="certification-block-container">
+            <div class="certification-block" data-image-src="python.png">
+                <h4><b>Anaconda Python for Data Science </b> | LinkedIn Learning Path</h4>
+                <p class="key-focus"><b>Key Focus:</b> Practical data analysis and visualization using key Python data science libraries.</p>
+                <p class="skills-covered"><b>Skills Covered:</b> Python (Programming Language), Data Analysis, Statistics, Pandas, NumPy, Matplotlib.</p>
+            </div>
+            <img src="python.png" alt="Python for Data Science Certificate" class="cert-image">
+        </div>
+
+<br>
+ <hr class="black-hr">
+ <br>
+
+ <div class="certification-block-container">
+<div class="certification-block" data-image-src="java-programming.jpg">
+<h4><b>Java Programming Course for Beginners</b> | Crio.Do</h4>
+                <p class="key-focus"><b>Key Focus:</b> Mastering Object-Oriented Programming (OOP) concepts and core Java syntax.</p>
+                <p class="skills-covered"><b>Skills Covered:</b> Core Java Programming, Object-Oriented Programming (OOP), Data Structures.</p>
+            </div>
+            <img src="java.png" alt="Java Programming Certificate" class="cert-image">
+        </div>
+
+    </div>
+</section>
+   <section class="contact-section">
+        <h2 class="contact-heading">Get In Touch</h2>
+        
+        <p class="contact-subtext">I am currently available for new opportunities. Let's connect!</p>
+
+        <div class="contact-links-container">
+
+            <a href="mailto:kashish23rathor7@gmail.com" class="contact-link">
+                <i class="fas fa-envelope contact-icon"></i>
+                <span class="contact-text">kashish23rathor7@gmail.com</span>
+            </a>
+
+            <a href="tel:+919984653874" class="contact-link">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <span class="contact-text">+91 99846 53874</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kashish212/" target="_blank" class="contact-link">
+                <i class="fab fa-linkedin contact-icon"></i>
+                <span class="contact-text">kashish212</span>
+            </a>
+
+            <a href="https://github.com/Kash-ishhh" target="_blank" class="contact-link">
+                <i class="fab fa-github contact-icon"></i>
+                <span class="contact-text">Kash-ishhh</span>
+            </a>
+
+        </div>
+    </section>
+    <footer class="site-footer">
+    <div class="footer-container minimal">
+        
+        <div class="footer-info">
+            <p class="copyright">&copy; 2025. All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-contact-minimal">
+            <a href="mailto:kashish23rathor7@gmail.com" class="minimal-email-link">
+                kashish23rathor7@gmail.com
+            </a>
+        </div>
+
+    </div>
+</footer>           
+
+    <script src="script.js"></script>
+
+</body>
+</html>

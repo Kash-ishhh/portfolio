@@ -1,0 +1,1038 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap');
+/* 🟢 NEW: Lora Font added */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+/* 🟢 NEW: Font Awesome for Icons (Still needed for project cards/future) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* --- Global Variables and Setup (Dark Theme - BLUE) --- */
+:root {
+    --bg-color: #000000;
+    --card-bg: #000000; /* Pure Black Card Background */
+    --text-color: #ffffff;
+    /* Blue colors */
+    --blue-light: #86f7ff; 
+    --blue-dark: #5134d3;
+    --blue-accent: #1454c3;
+    --blue-text: rgb(5, 5, 121); 
+    --card-shadow: #77f6ff25; /* Light blue shadow for cards */
+    --card-border: #87e3ff;
+    /* Vignette Color */
+    --vignette-dark: rgba(0, 0, 0, 0.525);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    line-height: 1.6;
+    color: var(--text-color);
+    background: #060606;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    height: auto !important; 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; 
+    /* Blue Gradient for Headings */
+    background: linear-gradient( 45deg, var(--blue-light), var(--blue-dark), var(--blue-light), #030e31);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 900;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+/* 🟢 All main sections are 100vh height */
+section {
+    padding: 80px 10%;
+    /* height: 100vh; <-- REMOVED */
+    min-height: 50vh; /* Replaced with a sensible minimum height */
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project-card a{
+   color: white;
+}
+.project-card a:hover{
+    color: #ffffff;
+    text-shadow: 0px 0px 3px #020707;
+    font-weight: 600;
+}
+/* --- Blue Gradient Utility Class --- */
+.golden-gradient-text, .logo, b, .navbar nav a:hover, .resume-button {
+    /* Apply a radial blue gradient effect to the text */
+    background: radial-gradient( var(--blue-light), #3e1dcd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block; 
+}
+
+/* --- 1. Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%; 
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden; 
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif; 
+}
+
+/* Navigation Links */
+.navbar nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Resume Button - Custom Gradient */
+.resume-button {
+    /* 🟢 MODIFIED: Inherits gradient from utility class */
+    background: radial-gradient( var(--blue-light), #3e1dcd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+    border: 1px solid var(--blue-light); 
+    padding: 5px; 
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: none; 
+    box-shadow: none; 
+    /* 🟢 NEW: Lora font family */
+    font-family: 'Lora', serif;
+}
+
+.resume-button:hover {
+    transform: none; 
+    box-shadow: none;
+    border: none;
+}
+
+
+/* --- 2. Hero Section --- */
+.hero-section {
+    /* 🟢 NEW: Setting Hero back to 100vh as it's the main landing page */
+    height: 70vh;
+    padding-bottom: 0%;
+    position: sticky; 
+    z-index: 1; 
+    background-color: #060606; 
+    top:11%;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px; 
+}
+
+.hero-content {
+    max-width: 35%; 
+    text-align: left; 
+    
+    background-color: #000000;
+    opacity: 1; 
+    z-index: 10; 
+
+}
+
+.hero-content h1 {
+    font-size: 6em; 
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-content h1.golden-gradient-text {
+    /* Use the standard blue gradient text rule */
+    background: radial-gradient( var(--blue-light), #3e1dcd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block; 
+}
+
+.hero-tagline {
+    font-size: 1.1em; 
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--text-color); 
+    display: block; 
+}
+
+.hero-image-placeholder {
+    width: 50%; 
+    height: 600px; 
+    background-color: var(--card-bg);
+    /* box-shadow: 0px 0px 15px #64f5ff95; */
+    border-radius: 5px; 
+    /* border: #87e3ff 1px solid; */
+}
+.hero-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* --- GSAP INITIAL STATE FIX --- */
+.nav-item, .hero-line, .hero-image-placeholder-gsap {
+    opacity: 0;
+}
+
+/* --- 3. Content Sections (Base) --- */
+.content-section {
+    background-color: #000000;
+    opacity: 1; 
+    z-index: 10;
+}
+
+/* --- About Me Section Styles --- */
+#about {
+    padding: 5%;
+   padding-top: 3%;
+    z-index: 20;
+}
+.typewriter-subheading {
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.5em; /* Thoda chhota size greeting se */
+    font-weight: 700;
+    color: var(--text-color); /* 'I'm' ke liye white color */
+    text-align: left;
+    
+    margin-bottom: 40px; /* Space rakho content se */
+}
+.typewriter-subheading{
+    opacity: 0; /* Inline display for typewriter effect */
+}
+
+
+/* 🟢 NEW: Gradient for changing text */
+.typewriter-subheading .gradient-text-span {
+    font-weight: 900;
+    /* Cyan, White, Sky Blue Gradient */
+    background: linear-gradient(90deg, #64f5ff, #ffffff, #87e3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.about-greeting {
+    font-size: 2.5em; 
+    font-weight: 900; 
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 500px;
+    text-align: center;
+    font-size: 1em; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+    width: 100%;
+}
+
+/* 🟢 MODIFIED: Ensure <b> tag inherits font color properly for gradient */
+.about-content p b {
+    /* Required to override default body color and apply gradient properly */
+    display: inline-block;
+}
+
+.about-content p {
+    margin-bottom: 15px; 
+}
+
+/* 🟢 NEW: Vignette Effect for About Me Section */
+#about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Clicking ko block na kare */
+    z-index: 1; /* Content ke peeche rakho */
+    
+    /* Vignette Effect CSS */
+    background: radial-gradient(
+        circle closest-side, /* Focus the center light area more sharply */
+        transparent 60%, /* Center 60% clear rakho */
+        var(--vignette-dark) 80% /* Bahar dark kar do */
+    );
+}
+
+
+/* ---------------------------------------------------- */
+/* 4. MY WORK (PROJECTS) SECTION STYLES */
+/* ---------------------------------------------------- */
+.work-section {
+    /* 🟢 MODIFIED: Set to min-height to allow expansion */
+     
+    
+    /* Full width, remove side padding for the loop container */
+    padding: 0px ; 
+    display: block; /* Changed back to block for easy content flow */
+    
+    /* 🟢 REMOVED: CSS Masking for Visibility */
+}
+
+.work-section .section-heading {
+    margin-bottom: 0px;
+    padding: 0px; /* Added padding for heading */
+}
+
+.projects-container-wrapper {
+    /* Defines the visible track area */
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+    position: relative;
+    /* Projects loop is height-controlled by track/cards, no need for 100vh */
+    min-height: 400px; 
+    
+    /* 🟢 NEW: Vignette Effect for Projects Wrapper */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8) inset; /* Soft darkening of edges */
+}
+
+.projects-container-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 10; 
+    
+    /* Radial Gradient for Vignette on the Projects Wrapper */
+    background: radial-gradient(
+        ellipse at center, 
+        transparent 20%, /* Center clear rakho */
+        rgba(0, 0, 0, 0.9) 100% /* Bahar dark kar do */
+    );
+}
+
+.projects-track {
+    /* The moving container. Width set dynamically by JS */
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 350px; /* Fixed height for the card loop */
+    align-items: center;
+}
+
+.project-card {
+    /* 🟢 FIXED DIMENSIONS */
+    width: 450px; 
+    height: 350px; 
+    flex-shrink: 0;
+    margin: 0 20px;
+    background-color: var(--card-bg); /* Pure black background */
+    border: 1px solid var(--card-border);
+    border-radius: 0; /* Removed border radius */
+    box-shadow: 0 4px 20px var(--card-shadow);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 30px var(--blue-light);
+}
+
+/* --- Media Layers and Overlays --- */
+.card-media-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image-static, .card-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s;
+}
+
+.card-video {
+    opacity: 0; /* Hidden by default */
+    filter: brightness(0.7); /* Only darkening effect for overlay */
+}
+
+/* Card Hover State */
+.project-card:hover .card-image-static {
+    opacity: 0; /* Hide image on hover */
+}
+
+.project-card:hover .card-video {
+    opacity: 1; /* Show video on hover */
+}
+
+/* --- Title Overlay (Top Section) --- */
+.card-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Set height to cover only the area where video is less visible (e.g., top 30% of card) */
+    height: 30%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Above info layer */
+    /* Background for better readability */
+    background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    pointer-events: none; /* Allows hover events to pass through */
+    /* 🟢 NEW: Lora font family */
+    font-family: 'Lora', serif;
+}
+
+/* --- Info Overlay (Center Section) --- */
+.card-info {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    /* 🟢 MODIFIED: Content alignment changed to center */
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 🟢 FIXED: Aligned content to the center */
+    align-items: center;
+    text-align: center;
+    z-index: 15;
+    /* 🟢 NEW: Lora font family */
+    font-family: 'Lora', serif;
+}
+
+.project-card:hover .card-info {
+    opacity: 1; /* Show description on hover */
+}
+
+/* 🟢 MODIFIED: Project Title (h3) is now WHITE */
+.card-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--text-color); /* 🟢 FIXED: White color for Project Title */
+}
+
+/* 🟢 MODIFIED: Tech Stack is now custom D2DEFF color */
+.card-info .tech-stack {
+    color: #d2deff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 🟢 MODIFIED: Project Description is now custom ADE3F4 color */
+.card-info .description {
+    color: #ade3f4; /* 🟢 FIXED: Custom color for Description */
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+/* ---------------------------------------------------- */
+/* 5. SERVICES SECTION STYLES */
+/* ---------------------------------------------------- */
+#services {
+    padding-top: 40px;
+    justify-content: flex-start;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+    /* 🟢 NEW: For GSAP initial stacking animation */
+    position: relative; 
+}
+
+.service-card {
+    /* 🟢 BACKGROUND CHANGE */
+    background: linear-gradient(
+        135deg, 
+        rgba(133, 239, 247, 0.705), 
+        rgba(15, 18, 120, 0.496)
+    );
+    /* 🟢 NEW: Relative position for absolute image/info overlay */
+    position: relative; 
+    border: 1px solid var(--card-border);
+    padding: 20px; /* Reduced padding for image visibility */
+    border-radius: 0; 
+    box-shadow: 0 4px 15px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Lora', serif;
+    height: 350px; 
+    overflow: hidden;
+}
+
+/* 🟢 Initial States for Animation */
+/* First row (Cards 1, 2, 3) start stacked on the LEFT */
+.service-card:nth-child(1),
+.service-card:nth-child(2),
+.service-card:nth-child(3) {
+    transform: translateX(-100%); 
+    opacity: 0;
+}
+
+/* Second row (Cards 4, 5, 6) start stacked on the RIGHT */
+.service-card:nth-child(4),
+.service-card:nth-child(5),
+.service-card:nth-child(6) {
+    transform: translateX(100%); /* 🟢 MODIFIED: Initial position set to RIGHT */
+    opacity: 0;
+}
+
+
+/* Z-index stacking ke liye */
+.service-card:nth-child(1) { z-index: 6; }
+.service-card:nth-child(2) { z-index: 5; }
+.service-card:nth-child(3) { z-index: 4; }
+.service-card:nth-child(4) { z-index: 3; }
+.service-card:nth-child(5) { z-index: 2; }
+.service-card:nth-child(6) { z-index: 1; }
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--blue-light);
+}
+
+.service-card h3 {
+    text-align: center; /* Center alignment for title */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    
+    /* 🟢 TITLE COLOR CHANGE */
+    color: #e1f3ff;
+    -webkit-text-fill-color: #e1f3ff; 
+    background-clip: border-box; 
+    background: none; 
+    text-fill-color: unset;
+    /* 🟢 NEW: Place title on top of image when not hovered */
+    position: relative; 
+    z-index: 5; 
+}
+
+/* --- Service Image Styling (The Media Layer) --- */
+.service-image-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.service-image-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🟢 MODIFIED: Image Dullness Increased */
+    filter: brightness(0.4); 
+}
+
+/* --- Service Content Info (The Hover Layer) --- */
+.service-content-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Should be above the image */
+    background: rgba(0, 0, 0, 0.75); /* Dark overlay */
+    padding: 30px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s;
+    
+    /* Center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* List alignment */
+}
+
+/* 🟢 Hover effects: Show info and hide image */
+.service-card:hover .service-image-media {
+    opacity: 0; 
+}
+
+.service-card:hover .service-content-info {
+    opacity: 1; /* Show description/list on hover */
+}
+
+/* 🟢 NEW: List Styling for Hover Info */
+.service-content-info ul {
+    list-style: disc; /* Use native disc */
+    padding-left: 20px;
+    margin-top: 15px;
+    width: 100%; /* Important for list formatting */
+}
+
+.service-content-info ul li {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    padding-left: 0;
+    position: relative;
+    /* 🟢 LIST TEXT COLOR */
+    color: #dbf7ff; 
+    text-align: left;
+}
+
+/* 🟢 NEW: Custom color for the disc bullet itself */
+.service-content-info ul li::marker {
+    color: var(--blue-light); /* Cyan color for the disc */
+}
+
+/* ---------------------------------------------------- */
+/* 6. SOFT SKILLS SECTION STYLES (NEW - Projects Look & Loop) */
+/* ---------------------------------------------------- */
+.soft-skills-section {
+    min-height: 80vh; 
+    padding: 30px 0; /* Top/Bottom padding rakha, sides removed for loop */
+    display: block;
+}
+
+.soft-skills-section .section-heading {
+    margin-bottom: 60px;
+    padding: 0 10%; /* Heading padding rakha */
+}
+
+.soft-skills-container-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 5%; /* Side padding rakha for wrapper vignette */
+    position: relative;
+    min-height: 450px; 
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8) inset; 
+}
+
+.soft-skills-container-wrapper::after {
+    /* Vignette effect like projects */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 10; 
+    background: radial-gradient(
+        ellipse at center, 
+        transparent 20%, 
+        rgba(0, 0, 0, 0.9) 100% 
+    );
+}
+
+.soft-skills-track {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 450px; /* Card height se match */
+    align-items: center;
+}
+
+.soft-skill-card {
+    /* Project Card dimensions aur styling copy */
+    width: 400px; /* Thoda chhota size for better fit */
+    height: 350px; 
+    align-items: center;
+    top: 70px;
+    flex-shrink: 0;
+    margin: 0 15px;
+    background-color: var(--card-bg); 
+    border: 1px solid var(--card-border);
+    border-radius: 0; 
+    box-shadow: 0 4px 20px var(--card-shadow);
+    overflow: hidden;
+    position: relative;
+    cursor: default; /* No pointer cursor */
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+.soft-skill-card:hover {
+    transform: none; /* No scaling effect on hover */
+    box-shadow: 0px 0px 4px var(--blue-light);
+}
+
+.soft-skill-card i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    /* Use gradient utility class for icon color */
+    background: radial-gradient( var(--blue-light), #3e1dcd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: block; 
+}
+
+.soft-skill-card h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color); /* White/Default color */
+    background: none;
+    -webkit-text-fill-color: var(--text-color);
+}
+
+.soft-skill-card p {
+   
+    font-size: 0.9em;
+    color: #dbf7ff;
+    line-height: 1.4;
+    padding-top: 5px;
+    
+}
+
+/* ---------------------------------------------------- */
+/* END OF PROJECTS SECTION STYLES */
+/* ---------------------------------------------------- */
+
+
+/* --- Placeholder Sections --- */
+/* ... (Previous CSS code) ... */
+
+/* ---------------------------------------------------- */
+/* 6. CERTIFICATIONS SECTION STYLES */
+/* ---------------------------------------------------- */
+.certifications-section {
+    display: block; /* Content flow ke liye block */
+    padding: 80px 10%; /* Proper padding rakha */
+    text-align: left;
+}
+
+.certifications-section .section-heading {
+    margin-bottom: 40px;
+}
+
+.certifications-content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.certifications-content h3 {
+    /* Section headings (EXPERIENCE/CERTIFICATIONS) ko white rakha */
+    color: var(--text-color);
+    -webkit-text-fill-color: var(--text-color);
+    background: none;
+    text-align: left;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.certifications-content h4 {
+    /* Course/Internship titles */
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    color: #b8e2ff; /* Light blue color */
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.certifications-content h4 b {
+    /* Bold part of title */
+    font-size: 1.4em;
+    font-family: lora;
+    /* Inherits light blue color from h4 */
+}
+.certifications-content p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Horizontal Rule for separation */
+.black-hr {
+    border: none;
+    height: 1px;
+    background-color: #1a1a1a; /* Dark gray/black line */
+    width: 100%;
+}
+
+.experience-block-container,
+.certification-block-container {
+    display: flex; /* Flexbox will arrange items (text block and image) in a row */
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: space-between; /* Pushes text to left and image to right */
+     
+}
+
+/* Styles for the text content blocks (Experience and Certification) */
+/* This will ensure the text takes up the left-side space */
+.experience-block,
+.certification-block {
+    flex-grow: 1; /* Allows the text block to take up available space */
+    /* Restricts the text width slightly so image has space */
+    padding-right: 20px; /* Space between text and image */
+}
+
+/* Styles for the Images */
+.cert-image {
+    max-width: 300px;
+    max-height: 300px;/* As requested by the user */
+    object-fit: contain; /* Ensures the entire image is visible, maintaining aspect ratio */
+    border: 4px solid #08294f; /* Optional: Adds a subtle border around the  shadow */
+}
+
+/* ... (Remaining CSS code) ... */
+/* --- Responsive Media Query --- */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 4em;
+        text-align: center;
+    }
+    .hero-tagline {
+        font-size: 1.2em;
+    }
+    .hero-image-placeholder {
+        width: 80%;
+        height: 350px;
+    }
+    .navbar nav {
+        display: none; 
+    }
+    .projects-track {
+        height: 350px;
+    }
+    .project-card {
+        width: 80vw; /* Use viewport width for better fit */
+        height: 60vw;
+        max-width: 350px;
+        max-height: 300px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+.contact-section {
+    background-color: #000000; 
+    padding: 60px 20px;
+    text-align: center;
+    /* border-top: 2px solid #d9d9d985; */
+}
+
+.contact-heading {
+    color: #00FFFF;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.contact-subtext {
+    margin-bottom: 40px;
+    font-size: 1em;
+    color: #ccc;
+}
+
+/* 📌 CHANGE 1: Same Line Layout (Flexbox) */
+.contact-links-container {
+    display: flex;
+    flex-wrap: wrap; /* Taki agar space kam ho, toh wrap ho jaaye */
+    justify-content: center;
+    /* Thodi kam space for tighter, inline look */
+    gap: 15px; 
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+
+/* Individual Link Styling */
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: #F0F0F0; 
+    padding: 12px 20px; /* Padding kam kiya for smaller size */
+    border: 1px solid #aaffff;
+    border-radius: 6px; /* Thoda kam border radius */
+    transition: all 0.3s ease;
+    /* Flex properties for inline look */
+    flex-grow: 0; 
+    flex-shrink: 1; 
+    flex-basis: auto; /* Content ki width ke hisaab se space lega */
+}
+
+/* 📌 CHANGE 2: Smaller Icon Size */
+.contact-icon {
+    color: #95d8d8; 
+    font-size: 1.2em; /* Icon size chhota kiya */
+    margin-right: 10px; /* Thoda kam margin */
+}
+
+.contact-text {
+    font-size: 0.9em; /* Text size bhi halka kam kiya */
+    white-space: nowrap; /* Taki text ek hi line mein rahe */
+}
+
+/* Hover Effect */
+.contact-link:hover {
+    background-color: rgba(0, 255, 255, 0.08); 
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6); 
+    transform: translateY(-3px); /* Thoda kam lift-up effect */
+    color: #FFFFFF;
+}
+ 
+/* Media Query: Agar chhota screen ho, toh bhi links ek ke neeche ek aayenge */
+@media (max-width: 768px) {
+    .contact-links-container {
+        gap: 10px; /* Mobile par gap aur kam */
+    }
+    .contact-link {
+        flex-basis: 100%; /* Agar zaroorat pade toh full width le lo */
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* ---------------------------------------------------- */
+/* 7. FOOTER STYLES (MINIMAL VERSION) */
+/* ---------------------------------------------------- */
+.site-footer {
+    /* Pure black background, thoda sa blue tint ke saath */
+    background-color: #060606; 
+    color: #dbf7ff;
+    padding: 20px 10%; /* Padding kam kiya */
+    border-top: 1px solid rgba(135, 227, 255, 0.2); /* Faint cyan border */
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container.minimal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-size: 0.85em;
+    color: #999;
+}
+
+.footer-contact-minimal {
+    margin-left: auto;
+}
+
+.minimal-email-link {
+    text-decoration: none;
+    color: #999; /* Email ko cyan color diya */
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.minimal-email-link:hover {
+    color: #00FFFF; /* Hover par cyan color */
+}
+
+/* Responsive adjustments for minimal footer */
+@media (max-width: 768px) {
+    .footer-container.minimal {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-contact-minimal {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+/* ---------------------------------------------------- */
+/* CERTIFICATION BLOCK HOVER EFFECT */
+/* ---------------------------------------------------- */
+
+/* 🟢 HOVER EFFECT */
+.certification-block:hover, .experience-block:hover {
+    /* Card ko thoda upar lift karna (Popup effect) */
+    transform: translateY(-5px); 
+    
+    transition: transform 0.5s ease-out;
+    /* Hover par background ko thoda light karna */
+    
+}
