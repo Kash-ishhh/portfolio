@@ -19,8 +19,8 @@ gsap.to(".hero-section", {
     scrollTrigger: {
         trigger: ".hero-section", // Animation Hero section ko dekhte hue trigger hoga
         start: "top 11%", // Hero page ko top par pin karega
-        endTrigger: "#work", // 🟢 MODIFIED: Ab Projects section (#work) trigger karega
-        end: "top 50%", // Hero section tab tak fade hoga jab Projects section ka top, viewport ke 25% par pahunch jaye
+        endTrigger: "#about", // 🟢 MODIFIED: Ab Projects section (#work) trigger karega
+        end: "top 30%", // Hero section tab tak fade hoga jab Projects section ka top, viewport ke 25% par pahunch jaye
         pin: true, // Hero section ko screen par pin rakhega
         scrub: 2, // Scroll ke saath smooth synchronize hoga
     }
@@ -48,36 +48,49 @@ gsap.to(".hero-section", {
     });
     
     // 🟢 ANIMATION 1: Top Row (Cards 1, 2, 3) - Left Stacked (FASTER DURATION) 🟢
-    gsap.to(".service-card:nth-child(-n+3)", {
+    
+   // 🟢 ANIMATION 1: Top Row (Cards 1, 2, 3) - Left Stacked 🟢
+// 🟢 ANIMATION 1: Top Row (Cards 1, 2, 3) - Deep Left Swipe 🟢
+gsap.fromTo(".service-card:nth-child(-n+3)", 
+    { 
+        x: -800, // 🟢 Value badha di (kaafi zyada left se aayega)
+        opacity: 0 
+    }, 
+    {
         x: 0, 
         opacity: 1,
-        duration: 0.35, // 🟢 MODIFIED: Thoda aur fast kiya for aggressive swipe effect
+        duration: 0.2, // Distance zyada hai toh duration thoda badha diya taaki smooth lage
         ease: "power2.out",
-        stagger: -0.1, // Right-to-Left sequence
+        stagger: -0.1, 
         scrollTrigger: {
             trigger: "#services",
             start: "top 75%", 
-            toggleActions: "play none none none",
-            once: true, 
+            toggleActions: "play reverse play reverse", 
+            once: false, 
         }
-    });
+    }
+);
 
-    // 🟢 ANIMATION 2: Bottom Row (Cards 4, 5, 6) - Right Stacked 🟢
-    gsap.to(".service-card:nth-child(n+4)", {
+// 🟢 ANIMATION 2: Bottom Row (Cards 4, 5, 6) - Deep Right Swipe 🟢
+gsap.fromTo(".service-card:nth-child(n+4)", 
+    { 
+        x: 800, // 🟢 Value badha di (kaafi zyada right se aayega)
+        opacity: 0 
+    }, 
+    {
         x: 0, 
         opacity: 1,
-        duration: 0.4, // Duration ko 0.4s par rakha gaya
+        duration: 0.2, 
         ease: "power2.out",
-        stagger: 0.1, // Left-to-Right sequence
+        stagger: 0.1, 
         scrollTrigger: {
-            trigger: ".service-card:nth-child(4)", // Card 4 ko trigger banaya
-            start: "top bottom", // Animation tab shuru hoga jab Card 4 viewport mein dikhne lagega
-            toggleActions: "play none none none",
-            once: true, 
+            trigger: ".service-card:nth-child(4)", 
+            start: "top bottom", 
+            toggleActions: "play reverse play reverse", 
+            once: false,
         }
-    });
-
-    
+    }
+);
     // 🟢 PROJECTS SECTION INFINITE LOOP LOGIC 🟢
     function initProjectsLoop() {
         const track = document.getElementById('projects-track');
